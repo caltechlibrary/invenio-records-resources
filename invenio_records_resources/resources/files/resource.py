@@ -191,4 +191,4 @@ class FileResource(ErrorHandlersMixin, Resource):
         if item is None:
             abort(404)
 
-        return item.to_dict(), 200
+        return item.to_dict()
