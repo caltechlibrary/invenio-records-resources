@@ -79,7 +79,6 @@ class RemoteTransfer(RemoteTransferBase):
                 uri=file_metadata.get("transfer", {}).get("url"),
                 size=file_metadata.get("size"),
                 checksum=file_metadata.get("checksum"),
-                readable=False,
             )
         obj = ObjectVersion.create(record.files.bucket, file_metadata["key"], fi.id)
         return super().init_file(record, file_metadata, obj=obj)
